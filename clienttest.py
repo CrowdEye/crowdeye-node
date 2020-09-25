@@ -1,7 +1,8 @@
 import cv2
 import urllib.request
+import numpy as np
 
-with urllib.request.urlopen("http://localhost:8080/video.mjpg") as url:
+with urllib.request.urlopen("http://localhost:5500/stream/0/annotated") as url:
     stream = bytes()
     while True:
         stream += url.read(1024)
